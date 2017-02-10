@@ -46,6 +46,9 @@ func main() {
 func check(e error, s string) {
 	if e != nil {
 		fmt.Fprintln(os.Stderr, s)
+		var res string
+		fmt.Println("何かキーを押してください")
+		_, _ = fmt.Scanln(&res)
 		panic(e)
 	}
 }
